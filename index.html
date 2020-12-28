@@ -1,1 +1,36 @@
-<!-- JavaScript課題①-3 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task1-3</title>
+</head>
+<body>
+  <script>
+    const taskList = ['掃除','買い物','散歩'];
+
+    function taskTable(){
+    console.log('==========================');
+    console.log('現在持っているタスクの一覧');
+    console.log('==========================');
+    taskList.forEach(function(value){
+      console.log(`${taskList.indexOf(value)}: ${value}`);
+    });
+  }
+  
+    taskTable();
+    
+    const task = prompt('タスクを記入してください');
+    const answer = (i) => {
+      taskList.push(i);
+      taskTable();
+    }
+    
+    answer(task);
+    
+    const rule = prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
+
+  </script>
+  
+</body>
+</html>
