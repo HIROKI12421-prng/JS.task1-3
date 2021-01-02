@@ -19,8 +19,8 @@
     console.log('現在持っているタスクの一覧');
     console.log('==========================');
 
-    taskList.forEach((task, index) => {
-    console.log(`${index} : [内容]${task.content}、[ジャンル]${task.type}`)
+    Object.keys(taskList).forEach(index => {
+      const table = console.log(`${index} : [内容]${taskList[index].content}、[ジャンル]${taskList[index].type}`)
     });
   }
   
