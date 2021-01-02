@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task1-4</title>
+</head>
+<body>
+
+  <script>
+    const taskList = [
+      {content:'机を片付ける', type:'掃除'},
+      {content:'牛乳を買う', type:'買い物'},
+      {content:'散歩をする', type:'散歩'},
+    ];
+
+    const taskTable = () => {
+    console.log('==========================');
+    console.log('現在持っているタスクの一覧');
+    console.log('==========================');
+
+    Object.keys(taskList).forEach(index => {
+      const table = console.log(`${index} : [内容]${taskList[index].content}、[ジャンル]${taskList[index].type}`)
+    });
+  }
+  
+  taskTable();
+
+ 
+    const task = prompt('タスクを入力してください');
+    const genre = prompt('ジャンルを入力してください');
+
+    const answer = (task, genre) => {
+      alert('新しいタスクを追加しました');
+      taskList[taskList.length] = {content:task, type:genre}
+      taskTable();
+    }
+    
+    answer(task, genre);
+    
+    const rule = prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
+
+  </script>
+  
+</body>
+</html>
